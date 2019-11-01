@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="WeatherMate" customModuleProvider="target">
+            <connections>
+                <outlet property="autoCompleteTableView" destination="98G-Lv-stx" id="ebZ-uA-tB9"/>
+                <outlet property="searchTextField" destination="Xod-Dp-MkW" id="eRZ-Oc-Izd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sök stad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xod-Dp-MkW">
+                    <rect key="frame" x="82" y="281" width="250" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="I9g-U8-cOE"/>
+                        <constraint firstAttribute="height" constant="34" id="ai5-zY-qYZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="name"/>
+                    <connections>
+                        <action selector="searchTextFieldEditingChanged:" destination="-1" eventType="editingChanged" id="9sK-Nv-DQ2"/>
+                    </connections>
+                </textField>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="98G-Lv-stx">
+                    <rect key="frame" x="82" y="315" width="250" height="304"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="Dup-oO-R7A"/>
+                        <constraint firstAttribute="height" constant="304" id="HDQ-Am-oQF"/>
+                    </constraints>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Xod-Dp-MkW" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-150" id="cX7-9B-6uU"/>
+                <constraint firstItem="98G-Lv-stx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cql-tI-9Yn"/>
+                <constraint firstItem="98G-Lv-stx" firstAttribute="top" secondItem="Xod-Dp-MkW" secondAttribute="bottom" id="log-Ka-Lek"/>
+                <constraint firstItem="Xod-Dp-MkW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rWO-oT-p4o"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
+        </view>
+    </objects>
+</document>
